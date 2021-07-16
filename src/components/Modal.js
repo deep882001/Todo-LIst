@@ -17,6 +17,7 @@ const Modal = ({add, clear}) => {
     resetInputField();
   }
 
+  
   const callClearTaskFunction = (e) => {
     e.preventDefault();
     clear(taskValue);

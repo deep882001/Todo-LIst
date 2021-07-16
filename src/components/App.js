@@ -1,8 +1,14 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useReducer, useEffect } from 'react';
 import '../App.css';
 import Tasks from './Tasks';
 import Modal from './Modal';
+import Welcome from './Welcome';
 import {useCookies} from 'react-cookie';
+
+
+
 
 const initialState = {
   tasks: []
@@ -51,6 +57,8 @@ const App = () => {
       payload: cookies.tasks
     });
   }, []);
+
+  <Welcome/>
 
   const add = taskValue => {
     if (!state.tasks) {
